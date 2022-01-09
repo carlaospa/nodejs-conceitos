@@ -1,6 +1,7 @@
-// Common JS (require / exports)
+// Common JS (require / exports)  => Module System
 
 const os = require('os')
+const log = require('./logger')
 
 setInterval(() => {
 
@@ -16,6 +17,8 @@ setInterval(() => {
         usage: `${percents} %`
     }
     console.table(stats);
+
+    log(`${JSON.stringify(stats)}\n`);
 
 }, 1000)
 
